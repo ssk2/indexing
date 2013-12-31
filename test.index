@@ -1,0 +1,14 @@
+[
+  {
+    "name": "revenue",
+    "score": 200
+  },
+  {
+    "name": "monthly_revenue",
+    "score": 100
+  },
+  {
+    "name": "yearly_revenue",
+    "score": 300
+  }
+]

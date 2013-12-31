@@ -26,5 +26,15 @@ public class ScorePair implements IndexKeyValue {
 		}
 		return 0;
 	}
+	
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append(this.name);
+		builder.append("\t");
+		builder.append(this.score);
+		builder.append("\n");
+		return builder.toString();
+	}
 
 }
