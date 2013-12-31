@@ -1,6 +1,5 @@
 package uk.co.geekonabicycle.indexing.trie;
 
-import java.io.IOException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -30,7 +29,7 @@ public class TrieNode<T> {
 		items.add(item);
 	}
 
-	public void addItem(String childKey, T childItem) throws IOException {
+	public void addItem(String childKey, T childItem) throws IllegalArgumentException {
 		if (childKey.equals(this.key)) {
 			items.add(childItem);
 		} else if (parentOf(childKey)) {
@@ -45,7 +44,7 @@ public class TrieNode<T> {
 			}
 			nextNode.addItem(childKey, childItem);
 		} else {
-			throw new IOException("Item cannot be added to this trie.");
+			throw new IllegalArgumentException("Item cannot be added to this trie.");
 		}
 	}
 

@@ -133,7 +133,7 @@ public class TrieNodeTest {
 		assertTrue(tNode.getItems().contains(10));
 	}
 	
-	@Test (expected = IOException.class)
+	@Test (expected = IllegalArgumentException.class)
 	public void addItemToWrongNode() throws IOException {
 		TrieNode<Integer> node = new TrieNode<Integer>("bot");
 		node.addItem("cart", 100);
